@@ -1,0 +1,12 @@
+请解释volatile与synchronized的区别？
+
+volatile主要在属性上使用，而synchronized实在代码块与方法上使用的
+
+volatile无法描述同步的处理，它只是一种直接内存的处理，避免了副本的操作，而synchronized实现了同步。
+
+
+变量的修改：读取数据，取得副本——>使用副本，进行值操作——>将副本值存储到原始空间
+
+而使用volatile修饰属性，则是直接操作原始数据，不需要操作副本，提升了效率
+
+有volatile修饰的属性时，必有synchronized修饰的代码块或者方法
